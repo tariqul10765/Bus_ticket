@@ -1,0 +1,12 @@
+@media (max-width: 570px){
+    .fare{
+        text-align: center;
+    }
+    .system{
+        border-right: none;
+      
+      }
+    .bus{
+        border-right: none;
+    }
+}

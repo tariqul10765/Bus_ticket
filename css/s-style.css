@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* header /navbar */
+.navbar{   
+    background-color: darkblue;
+    position: fixed;
+}
+.nav-item a{
+    color: white !important;
+    margin-right: 40px;
+}
+.logo{
+    width: 100px;
+}
+
+/* operator/route area */
+#operator{
+    padding: 20px; 
+    padding-top: 40px !important;
+}
+.operator{
+    margin-top: 88px ;
+}
+.route{
+    padding-bottom: 40px !important;
+}
+#operator .container{
+    background-color: #f5f6f9;
+}
+.O_heading{
+    font-weight: 900;
+    padding: 10px 0 20px 0;
+    color: darkblue;
+    
+}
+.route a{
+    font-size: 14px;
+    font-weight: 500;
+    color: #212529;  
+    text-decoration: none;
+}
+
+.fa-bus{
+    color: rgb(78, 180, 214) !important;
+}
+.fa-road{
+    color: green;
+}
+
+/*  operator/route area stop*/
+
+/* footer1 start */
+#footer1{
+    background-color: rgb(57, 66, 66);
+    padding: 30px 0;
+}
+#footer1 h3{
+    color: white;
+    font-weight: 700;
+}
+.footer1-item{
+    padding-left: 65px;
+}
+.foter-list a{
+    color:  rgba(255,255,255,0.5);
+    text-decoration: none;
+}
+.footer1-text{
+    color:  rgba(255,255,255,0.5);
+}
+
+/* footer2 */
+#footer2{
+    background-color: rgb(42, 44, 44);
+    padding: 20px 0;
+    text-align: center;
+}
+#footer2 h5{
+    color:  rgba(255,255,255,0.8); 
+}

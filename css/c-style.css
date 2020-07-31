@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-weight: 900;
+}
+h5{
+    font-weight: 600;
+    padding: 10px;
+}
+/* header /navbar */
+
+
+.navbar{   
+    background-color: darkblue;
+    position: fixed;
+ 
+}
+.nav-item a{
+    color: white !important;
+    margin-right: 40px;
+}
+.logo{
+    width: 100px;
+}
+/* navbar end */
+/* feedback area start */
+.form{
+    border: 1px solid  rgb(104, 117, 104,.5);
+    border-radius: 10px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 138px;
+    margin-bottom: 50px;
+    padding: 10px 0;
+}
+.p{
+    text-align: center;
+    color: rgb(104, 117, 104);
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 2px 2px 6px rgb(94, 102, 94);
+}
+.lbl{
+    margin: 0px 0px 0px 45px ;
+    display: none;
+    color: rgb(104, 117, 104);
+    font-style: italic;
+}
+.group-item{
+    margin: 20px 44px !important;
+    width: 380px;
+    padding: 12px 12px;
+    border: 1px solid transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: -2px -2px 6px 2px lightslategray;
+}
+.group-item:focus{
+    outline: 0;
+}
+.massage{
+    width: 860px;
+}
+
+
+.btn{
+    width: 100px;
+    border: 1px solid transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.btn:hover{
+    color: white;
+    background-color: black;
+    box-shadow: -2px -2px 6px 4px darkslategray;
+}
+
+/* feedback end */
+
+/* footer1 start */
+#footer1{
+    background-color: rgb(57, 66, 66);
+    padding: 30px 0;
+}
+#footer1 h3{
+    color: white;
+    font-weight: 700;
+}
+.footer1-item{
+    padding-left: 65px;
+}
+.foter-list a{
+    color:  rgba(255,255,255,0.5);
+    text-decoration: none;
+}
+.footer1-text{
+    color:  rgba(255,255,255,0.5);
+}
+
+/* footer2 */
+#footer2{
+    background-color: rgb(42, 44, 44);
+    padding: 20px 0;
+    text-align: center;
+}
+#footer2 h5{
+    color:  rgba(255,255,255,0.8); 
+}
+

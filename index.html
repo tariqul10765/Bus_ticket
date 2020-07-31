@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--date picker link-->
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+
+    
+    
+
+
+    <!--fontawesome link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+    <!-- owl carousel link-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!--    date picker-->
+
+
+    <!-- sweet alert link-->
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- media css -->
+    <link rel="stylesheet" href="media/media.css">
+
+    <title>safetravel online bus ticket platform</title>
+</head>
+
+<body>
+
+    <!-- Header Navbar start -->
+
+    <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="nava">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="pic/newlogo.png" class="logo img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header Navbar stop -->
+    <!-- banner area start  -->
+    <section id="banner">
+        <div class="container">
+            <div class="banner align-items-center">
+                <form onsubmit="submitHandle(event)" action="searchbus.html" enctype="multipart/form-data" novalidate autocomplete="on">
+            
+                    <div class="from-item">
+                        <label for="From">From </label><br>
+                        <input type="text" class="choice" list="City" name="from" placeholder="Enter City" id="From" value="">
+                        <datalist id="City">
+                                <option value="Dhaka">                       
+                                <option value="Sylhet">
+                                <option value="Cumilla">
+                                <option value="Narayanganj">
+                                <option value="Chittagong">
+                                <option value="Chandpur">
+                                <option value="Rajshahi">
+                                <option value="Barishal">
+                                <option value="Pabna">
+                                <option value="Rangpur">
+                                <option value="Sunamganj">
+                                <option value="Jasore">
+                                <option value="MouloviBazar">
+                                <option value="Cox's Bazar">
+                                <option value="Gazipur">
+                                <option value="Tangail">
+                                <option value="Sirajganj">
+                                <option value="Khulna">
+                                <option value="Natore">
+                                <option value="Norail">
+                                <option value="Rangamati">
+                                <option value="B-baria">
+                                <option value="Bandarban"> 
+                                <option value="Rangamati"> 
+                                <option value="Khagrachari"> 
+                                <option value="Feni"> 
+                                <option value="Habigang"> 
+                                <option value="Trtulia"> 
+                                <option value="Tekanf"> 
+                                <option value="ChapaiNababgang"> 
+                                <option value="Satkhira"> 
+                                <option value="Gopalganj"> 
+                                <option value="Bagerhat"> 
+                                <option value="Magura">
+                                <option value="Kustia"> 
+                                <option value="Kuakata">               
+                        </datalist>
+                      </div>
+                    
+                      <div class="from-item">
+                        <label for="To">Destination </label><br>
+                        <input type="text" class="choice" list="City" name="from" placeholder="Enter City" id="To">
+                        <datalist id="City">
+                                <option value="Dhaka">                       
+                                <option value="Sylhet">
+                                <option value="Cumilla">
+                                <option value="Narayanganj">
+                                <option value="Chittagong">
+                                <option value="Chandpur">
+                                <option value="Rajshahi">
+                                <option value="Barishal">
+                                <option value="Pabna">
+                                <option value="Rangpur">
+                                <option value="Sunamganj">
+                                <option value="Jasore">
+                                <option value="MouloviBazar">
+                                <option value="Cox's Bazar">
+                                <option value="Gazipur">
+                                <option value="Tangail">
+                                <option value="Sirajganj">
+                                <option value="Khulna">
+                                <option value="Natore">
+                                <option value="Norail">
+                                <option value="Rangamati">
+                                <option value="B-baria">
+                                <option value="Bandarban"> 
+                                <option value="Rangamati"> 
+                                <option value="Khagrachari"> 
+                                <option value="Feni"> 
+                                <option value="Habigang"> 
+                                <option value="Tetulia"> 
+                                <option value="Tekanf"> 
+                                <option value="ChapaiNababgang"> 
+                                <option value="Satkhira"> 
+                                <option value="Gopalganj"> 
+                                <option value="Bagerhat"> 
+                                <option value="Magura"> 
+                                <option value="Kustia"> 
+                                <option value="Kuakata">      
+                        </datalist>
+                      </div>
+                    
+                    <div class="from-item">
+                    <label for="Date">Date of Journey : </label><br>
+                    <input id="datepicker" class="choice" placeholder="Pick up a Date" />
+                    <script>
+                        $('#datepicker').datepicker({
+                    uiLibrary: 'bootstrap4',
+                    dateFormat: "dd/mm/yy"
+                    
+                        });
+
+                    </script>
+                       </div>
+                       
+                       <button class="btn btn1" role="button" aria-pressed="true"><i class="fas fa-search"></i>Search Bus</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- banner end -->
+
+    <!--    Customer feedback area start-->
+
+    <section class="features-wrapper py-5">
+        <div class="container testimonial-wrap">
+            <div class="owl-carousel testimonial-carousel owl-theme">
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer1.jpg" alt="">
+                </div>
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer2.jpg" alt="">
+                </div>
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer3.jpg" alt="">
+                </div>
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer4.jpg" alt="">
+                </div>
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer5.jpg" alt="">
+                </div>
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer6.jpg" alt="">
+                </div>
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer7.jpg" alt="">
+                </div>
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer8.jpg" alt="">
+                </div>
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer9.jpg" alt="">
+                </div>
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer10.jpg" alt="">
+                </div>
+                <div class="testimonial-item">
+                    <img class="offer" src="pic/offer11.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    Customer feedback area start-->
+
+    <!-- Operator start -->
+    <div id="operator" class="operator">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm text-center">
+                    <h1 class="O_heading">OUR OPERATORS</h1>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-lg-3 col-md-4">
+                    <p><i class="fas fa-bus"></i> Hanif Enterprise</p>
+                    <p><i class="fas fa-bus"></i> Ena Paribahon</p>
+                    <p><i class="fas fa-bus"></i> Sakura Paribahon</p>
+                    <p><i class="fas fa-bus"></i> Kuakata Express</p>
+                    <p><i class="fas fa-bus"></i> Green Line</p>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <p><i class="fas fa-bus"></i> Star Line</p>
+                    <p><i class="fas fa-bus"></i> Asia Line</p>
+                    <p><i class="fas fa-bus"></i> Royel Coach</p>
+                    <p><i class="fas fa-bus"></i> Prince</p>
+                    <p><i class="fas fa-bus"></i> Silk Line</p>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <p><i class="fas fa-bus"></i> Green Saintmartin Express</p>
+                    <p><i class="fas fa-bus"></i> Soudia Paribahon</p>
+                    <p><i class="fas fa-bus"></i> Uniqe Paribahon</p>
+                    <p><i class="fas fa-bus"></i> Saintmartin Travels</p>
+                    <p><i class="fas fa-bus"></i> Saintmartin Paribahan</p>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <p><i class="fas fa-bus"></i> Shymoli Paribahon</p>
+                    <p><i class="fas fa-bus"></i> S.Alam Paribahon</p>
+                    <p><i class="fas fa-bus"></i> National Travels</p>
+                    <p><i class="fas fa-bus"></i> President Travels</p>
+                    <p><i class="fas fa-bus"></i> Sarker Travels</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Operator stop -->
+
+
+    <!-- root area start -->
+
+    <div id="operator" class="route">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm text-center">
+                    <h1 class="O_heading">AVAILABLE BUS ROUTES</h1>
+                </div>
+            </div>
+            <div class="row no-gutters route">
+                <div class="col-lg-3 col-md-4">
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - CHITTAGONG</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - COX'S BAZAR</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - KHAGRACHHARI</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - RANGAMATI</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - BANDARBAN</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - KOLKATA</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - RAJSHAHI</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - BARISAL</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - KUAKATA</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - TANGAIL</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - KHULNA</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - CUMILLA</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - SYLHET</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - PABNA</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - MOULVIBAZAR</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - SUNAMGANJ</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - DINAJPUR</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - RANGPUR</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - BOGRA</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - SIRAJGANJ</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - PATUAKHALI</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - BAGERHAT</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;CHITTAGONG - SYLHET</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - GOPALGANJ</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;RANGPUR - RAJSHAHI</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;DHAKA - MANIKGANJ</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;CUMILLA - SYLHET</p>
+                    </a>
+                    <a href="#header">
+                        <p onclick="routeHandle(event)"><i class="fas fa-road"></i> &nbsp;CUMILLA - CHITTAGONG</p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- root area stop -->
+    <!--    counter area start-->
+    <section class="counter-wrapper py-5">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-sm">
+                    <h3 class="counter_heading">OUR achievement</h3>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-sm-6 col-md-4">
+                    <div class="counter-item text-center text-white">
+                        <img src="pic/man.png" class="customer img-fluid  img-thumbnail">
+                        <h4 class="text-uppercase m-2"><small>Happy Customer</small></h4>
+                        <div class="counter-count align-items-center d-flex">
+                            <h2 class="counter font-bold">1,000</h2>&nbsp;<i class="fas fa-plus "></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="counter-item text-center text-white">
+                        <img src="pic/ticket1.png" class="customer img-fluid  img-thumbnail">
+                        <h4 class="text-uppercase m-2"><small>Ticket Per Day</small></h4>
+                        <div class="counter-count align-items-center d-flex">
+                            <h2 class="counter font-bold">2,000</h2>&nbsp;<i class="fas fa-plus "></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="counter-item text-center text-white">
+                        <img src="pic/map.png" class="customer img-fluid   img-thumbnail">
+                        <h4 class="text-uppercase m-2"><small>Districts Covered</small></h4>
+                        <div class="counter-count align-items-center d-flex">
+                            <h2 class="counter font-bold">30</h2>&nbsp;<i class="fas fa-plus "></i>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--    counter area stop-->
+    <!-- footer 1  start-->
+    <section id="footer1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 footer1-item">
+                    <h3>safetravel</h3>
+                    <p class="footer1-text">
+                        safetravel.com is a premium online booking portal which allows you to purchase tickets for various bus services across the country.
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-12 footer1-item">
+                    <h3>Company Info</h3>
+                    <h6 class="foter-list"><a href="">Terms & Conditions</a></h6>
+                    <h6 class="foter-list"><a href="">FAQ</a></h6>
+                    <h6 class="foter-list"><a href="">Privacy & Policy</a></h6>
+                    <h6 class="foter-list"><a href="">How To Buy Tickets</a></h6>
+                </div>
+                <div class="col-md-4 col-sm-12 footer1-item">
+                    <h3>About safetravel</h3>
+                    <h6 class="foter-list"><a href="about.html">About Us</a></h6>
+                    <h6 class="foter-list"><a href="contact.html">Contact Us</a></h6>
+                    <h6 class="foter-list"><a href="services.html">Services</a></h6>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- footer 1  stop-->
+    <!--footer 2 start-->
+
+    <section id="footer2">
+        <h5>© 2020 safetravel. All rights reserved.</h5>
+    </section>
+
+    <!-- footer 2 stop -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+    <!--    isotope-->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+
+    <!--  owl carousel-->
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!--    waypoint-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+
+    <!-- javascript -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // init Isotope
+            var $grid = $('.grid').isotope({
+                // options
+            });
+            // filter items on button click
+            $('.filter-button-group').on('click', 'button', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+
+            //owl carousel//
+
+            $(".testimonial-carousel").owlCarousel({
+                nav: true,
+                responsive: false,
+                loop: true,
+                dots: false,
+                margin: 20,
+                autoplay: true,
+                autoplaytimeout: 4000,
+                // Responsive 
+                // items: 3,
+                responsive:{
+        0:{
+            items:1
+        },
+        576:{
+            items:2
+        },
+        991:{
+            items:3
+        }
+    }
+            });
+            //counter//
+
+            $('.counter').counterUp({
+                delay: 15,
+                time: 10500
+            });
+
+            // date picker//
+          
+                // $("#datepicker").datepicker({
+                    
+                // });
+        
+
+
+        });
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        // window.onscroll = function() {
+        //     scrollFunction()
+        // };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("nava").style.backgroundColor = "darkblue";
+                document.getElementsByClassName("logo").style.fontSize = "300px";
+            } else {
+                document.getElementById("nava").style.backgroundColor = "transparent";
+                // document.getElementsByClassName("nav-item.a").style.color = "black";
+                document.getElementsByClassName("logo").style.fontSize = "100px";
+            }
+        }
+
+    </script>
+
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

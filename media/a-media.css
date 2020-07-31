@@ -1,0 +1,26 @@
+@media (max-width : 768px){
+
+     #footer1 h3{
+    color: white;
+    font-size: 18px !important;
+}
+    .footer1-item{
+    padding-left: 20px;
+}
+}
+@media (min-width : 992px) and (max-width : 1200px) {
+
+    .footer1-item{
+    padding-left: 30px;
+}
+}
+@media (max-width : 560px){
+    h1{
+        font-weight: 800;
+    }
+}
+@media (max-width : 360px){
+    h1{
+        font-weight: 700;
+    }
+}

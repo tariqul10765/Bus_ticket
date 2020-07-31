@@ -1,0 +1,144 @@
+@media (max-width : 429px){
+   
+    .form{
+        max-width: 90% !important;
+
+    }
+    .group-item{    
+        width: 90% !important;
+        margin: 10px 16px !important;
+
+    }
+    .massage{
+        width: 90% !important;
+    }
+     #footer1 h3{
+    color: white;
+    font-size: 18px !important;
+}
+    .footer1-item{
+    padding-left: 20px;
+}
+.lbl{
+    margin: 0px 0px 0px 20px
+}
+}
+
+@media (min-width : 430px) and (max-width : 767.9px){
+   
+    .form{
+        max-width: 70% !important;
+ 
+    }
+    .group-item{    
+        width: 90% !important;
+        margin: 10px 23px !important;
+    }
+    .massage{
+        width: 90% !important;
+    }
+    
+     #footer1 h3{
+    color: white;
+    font-size: 18px !important;
+}
+    .footer1-item{
+    padding-left: 20px;
+}
+.lbl{
+    margin: 0px 0px 0px 20px
+}
+}
+@media (min-width : 767.9px) and (max-width : 991px) {
+   
+    .form{
+        max-width: 60% !important;
+
+    }
+    .group-item{    
+        width: 90% !important;
+        margin: 10px 13px !important;
+    }
+    .massage{
+        width: 95% !important;
+    }
+    .btn{
+        width: 95% !important;
+
+    }
+   #footer1 h3{
+    color: white;
+    font-size: 18px !important;
+}
+    .footer1-item{
+    padding-left: 20px;
+}
+.lbl{
+    margin: 0px 0px 0px 20px
+}
+
+}
+@media (min-width : 992px) and (max-width : 1200px) {
+   
+    .form{
+        max-width: 60% !important;  
+
+    }
+    .group-item{    
+        width: 90% !important;
+        margin: 10px 15px !important;
+    }
+    .massage{
+        width: 95% !important;
+    }
+    .btn{
+        width: 95% !important;
+
+    }
+    .footer1-item{
+    padding-left: 30px;
+}
+.lbl{
+    margin: 0px 0px 0px 20px
+}
+}
+@media (min-width : 1200px) and (max-width : 1400px) {
+   
+    .form{
+        max-width: 60% !important;
+    }
+    .group-item{    
+        width: 90% !important;
+        margin: 10px 20px !important;
+    }
+    .massage{
+        width: 95% !important;
+    }
+    .btn{
+        width: 95% !important;
+
+    }
+    .lbl{
+        margin: 0px 0px 0px 20px
+    }
+    
+}
+    
+}
+    @media (min-width : 1400px) and (max-width : 1700px) {
+   
+    .form{
+        max-width: 60% !important;
+    }
+    .group-item{    
+        width: 90% !important;
+        margin: 10px 25px !important;
+    }
+    .massage{
+        width: 95% !important;
+    }
+    .btn{
+        width: 95% !important;
+
+    }
+}

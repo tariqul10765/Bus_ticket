@@ -1,0 +1,24 @@
+@media (max-width : 400px){
+    .O_heading{
+       
+       font-size: 33px;
+       
+   }
+ }
+
+@media (max-width : 768px){
+
+     #footer1 h3{
+    color: white;
+    font-size: 18px !important;
+}
+    .footer1-item{
+    padding-left: 20px;
+}
+}
+@media (min-width : 992px) and (max-width : 1200px) {
+
+    .footer1-item{
+    padding-left: 30px;
+}
+}

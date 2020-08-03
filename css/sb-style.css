@@ -18,8 +18,20 @@ h4{
 .logo{
     width: 100px;
 }
+/* empty buses */
+#emptyDiv{
+    
+    width: 100%;
+    height: 75vh;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+}
 /* bus area */
 #serch_bus{
+    display: none;
     margin-top: 88px;
 }
 /* fare area start*/
@@ -41,6 +53,9 @@ h4{
     padding: 10px;
     background-color: #f3f3f3;
     margin-bottom: 10px;
+
+
+    display: none;
 }
 
 .bus{

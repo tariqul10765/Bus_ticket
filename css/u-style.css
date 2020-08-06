@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* header /navbar */
+.navbar{   
+    background-color: darkblue;
+    position: fixed;
+}
+.nav-item a{
+    color: white !important;
+    margin-right: 40px;
+}
+.logo{
+    width: 100px;
+}
+/* content area */
+#content{
+    margin-top: 138px;
+}
+.form{
+    max-width: 100%;
+    border-right: 2px solid green;
+    padding-right: 20px;
+   
+    
+}
+.information{
+    color: green;
+    width: 97%;
+    border-bottom: 2px solid green;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+/* for information details */
+.info{
+    margin-left: 20px;
+}
+#destination,#seat_no{
+    color: green;
+}
+
+.from-group{
+    margin: 5px 0;  
+}
+.from1{
+    padding-top: 10px;
+}
+.from-last{
+    padding-bottom: 10px;
+}
+
+.lbl{
+    width: 150px;
+    margin: 0px 0px 0px 5px ;
+    color: black;
+    
+}
+.group-item{
+    border: none;
+    width: 200px;
+    border-bottom: 1px dotted black;  
+}
+.group-item:focus{
+    outline: 0;
+}
+#tag{
+    float: right;
+    padding-right: 5px;
+
+}
+/* confirm area */
+.confirm1{
+    
+    padding-right: 20px;
+}
+.confirm2{
+    border-left: 2px solid green;
+    
+}
+.method{
+    margin: 15px 0;
+    padding: 10px 10px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 0.5px solid #F4F4F4;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    
+    
+}
+.method:hover{
+    border: 0.5px solid #089D49;
+    cursor: pointer;
+    color: #089D49;
+}
+    .logo2{
+        width: 30px;
+        height: 30px;
+        
+    }
+    .title ul li{
+         background: #ffffff;
+        border-bottom: 1px solid #3f3f3f;
+        padding: 10px 0;
+    }
+    .title li{
+        list-style: none;
+ 
+    }
+    .user{
+        float: right;
+    }
+
+
+.submit{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+.submit button{
+   padding: 15px 60px;
+}
+
+
+/* footer1 start */
+#footer1{
+    background-color: rgb(57, 66, 66);
+    padding: 30px 0;
+}
+#footer1 h3{
+    color: white;
+    font-weight: 700;
+}
+.footer1-item{
+    padding-left: 65px;
+}
+.foter-list a{
+    color:  rgba(255,255,255,0.5);
+    text-decoration: none;
+}
+.footer1-text{
+    color:  rgba(255,255,255,0.5);
+}
+
+/* footer2 */
+#footer2{
+    background-color: rgb(42, 44, 44);
+    padding: 20px 0;
+    text-align: center;
+}
+#footer2 h5{
+    color:  rgba(255,255,255,0.8); 
+}

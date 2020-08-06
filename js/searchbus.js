@@ -1,7 +1,7 @@
 let getFrom=localStorage.getItem("getFrom");
 let getTo=localStorage.getItem("getTo");
 
-console.log("hei "+getFrom);
+//console.log("hei "+getFrom);
 
 
 let dha_chitta=[
@@ -872,7 +872,7 @@ if(route_All_Details.length>0){
     
     document.getElementById("serch_bus").style.display="block";
     //document.getElementById("emptyDiv").innerHTML="Buses is not available";
-    console.log("empty");
+    //console.log("empty");
 }
 if(route_All_Details.length==0){
     document.getElementById("emptyDiv").style.display="flex";

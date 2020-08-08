@@ -6,6 +6,8 @@ let to=document.getElementById("To");
 let demo=document.getElementById("demo");
 
 
+
+
 from.value=localStorage.getItem("from");
 to.value=localStorage.getItem("to");
 
@@ -138,12 +140,14 @@ submitHandle=(e)=>{
     //e.preventDefault();
     // let getFrom=localStorage.getItem("from");
     // let getTo=localStorage.getItem("to");
-
+    
     let getFrom=document.getElementById("From").value;
     let getTo=document.getElementById("To").value;
+    let getDate=document.getElementById("datepicker").value;
 
         localStorage.setItem("getFrom",getFrom);
         localStorage.setItem("getTo",getTo);
+        localStorage.setItem("getDate",getDate);
 
         
     

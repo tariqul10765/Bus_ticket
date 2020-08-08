@@ -53,13 +53,13 @@
             <div class="row no-gutters">
                 <div class="col-md-6 ">
                   
-                    <form action="" class="form" method="dialog" enctype="multipart/form-data" novalidate autocomplete="on">
+                    <form action="" class="form" method="dialog" enctype="multipart/form-data" onsubmit="booked()">
                         <div class="information">
                             <h4>Passenger Information</h4>
                         </div>
                         <div class="from-group from1">
                             <label for="First_name " class="lbl">Name <span id="tag">:</span></label>
-                            <input type="text" name="text" class="group-item" placeholder="Enter Your Full Name">
+                            <input type="text" name="text" class="group-item" placeholder="Enter Your Full Name" required>
                           </div>
                           <div class="from-group">
                             <div class="radio">
@@ -72,12 +72,17 @@
                           
                           <div class="from-group">
                             <label for="Number" class="lbl">Contact Number <span id="tag">:</span></label>
-                            <input type="number" name="number" class="group-item" placeholder="Enter Number">
+                            <input type="number" name="number" class="group-item" placeholder="Enter Number" required>
                           </div>
                           <div class="from-group from-last">
                             <label for="Email " class="lbl">Email Address<span id="tag">:</span></label>
-                            <input type="email" name="email" class="group-item" placeholder="Enter Your Email">
+                            <input type="email" name="email" class="group-item" placeholder="Enter Your Email" required>
                           </div>
+
+                          <div class="submit">
+                            <button>Confirm</button>
+                          </div>
+
                           </form>
                   
 
@@ -181,9 +186,7 @@
 
     <!-- confirm Area Stop -->
 
-    <div class="submit">
-      <button>Confirm</button>
-    </div>
+    
          <!-- footer 1  start-->
 <section id="footer1">
     <div class="container">

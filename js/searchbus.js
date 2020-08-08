@@ -1,7 +1,74 @@
 let getFrom=localStorage.getItem("getFrom");
 let getTo=localStorage.getItem("getTo");
+let getDate=localStorage.getItem("getDate");
+
+
+
 
 //console.log("hei "+getFrom);
+
+// for checking perpuse
+
+let pabna_raj=[
+    {
+        _id: '1',
+        bus:"GREEN LINE ",
+        bus_class:"DECK AC",
+        coach:"AG6",
+        route:"Dhaka- Chittagong",
+        start:"Dhaka",
+        end:"Chittagong",
+        fare:1600,
+        avTickit: 40,
+        avSit: ['A', 'B', 'C', 'D', 'E'],
+        bookedSit: []
+    },
+    {
+        _id: '2',
+        bus:"RELAX TRANSPORT ",
+        bus_class:"AC",
+        coach:"R06",
+        route:"Dhaka- Chittagong",
+        start:"Dhaka",
+        end:"Chittagong",
+        fare:1500,
+        avTickit: 40,
+        avSit: ['A', 'B', 'C', 'D', 'E'],
+        bookedSit: ['B']
+    },
+];
+
+// function getSingleData(id) {
+//     return 
+// }
+
+// function updateTic() {
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// end check
+
+
+
+
+
+
+
+
+
+
 
 
 let dha_chitta=[
@@ -13,6 +80,7 @@ let dha_chitta=[
         start:"Dhaka",
         end:"Chittagong",
         fare:1600,
+        sAvailable:32,
     },
     {
         bus:"RELAX TRANSPORT ",
@@ -22,6 +90,7 @@ let dha_chitta=[
         start:"Dhaka",
         end:"Chittagong",
         fare:1500,
+        sAvailable:32,
     },
     {
         bus:"SHYAMOLI NR TRAVELS ",
@@ -31,6 +100,7 @@ let dha_chitta=[
         start:"Dhaka",
         end:"Chittagong",
         fare:750,
+        sAvailable:32,
     },
     {
         bus:"Hanif Enterprise ",
@@ -40,6 +110,7 @@ let dha_chitta=[
         start:"Dhaka",
         end:"Chittagong",
         fare:750,
+        sAvailable:32,
     },
     {
         bus:"SAINTMARTIN TRAVELS ",
@@ -49,6 +120,7 @@ let dha_chitta=[
         start:"Dhaka",
         end:"Chittagong",
         fare:1800,
+        sAvailable:32,
     },
 ];
 
@@ -61,6 +133,7 @@ let dha_khag=[
         start:"Dhaka",
         end:"Khagrachari",
         fare:520,
+        sAvailable:32,
     },
     {
         bus:"S.ALAM SERVICE ",
@@ -70,6 +143,7 @@ let dha_khag=[
         start:"Dhaka",
         end:"Khagrachari",
         fare:520,
+        sAvailable:32,
     },
     {
         bus:"SHYAMOLI PARIBAHAN ",
@@ -79,6 +153,7 @@ let dha_khag=[
         start:"Dhaka",
         end:"Khagrachari",
         fare:520,
+        sAvailable:32,
     },
     {
         bus:"ECHONO SERVICE ",
@@ -88,6 +163,7 @@ let dha_khag=[
         start:"Dhaka",
         end:"Khagrachari",
         fare:520,
+        sAvailable:32,
     },
     {
         bus:"HANIF ENTERPRISE ",
@@ -97,6 +173,7 @@ let dha_khag=[
         start:"Dhaka",
         end:"Khagrachari",
         fare:1000,
+        sAvailable:32,
     },
 ];
 
@@ -109,6 +186,7 @@ let dha_cox=[
         start:"Dhaka",
         end:"Cox's Bazar",
         fare:800,
+        sAvailable:32,
     },
     {
         bus:"S Alam ",
@@ -118,6 +196,7 @@ let dha_cox=[
         start:"Dhaka",
         end:"Cox's Bazar",
         fare:800,
+        sAvailable:32,
     },
     {
         bus:"Syamoli Paribahan ",
@@ -127,6 +206,7 @@ let dha_cox=[
         start:"Dhaka",
         end:"Cox's Bazar",
         fare:800,
+        sAvailable:32,
     },
     {
         bus:"GREEN LINE PARIBAHAN ",
@@ -136,6 +216,7 @@ let dha_cox=[
         start:"Dhaka",
         end:"Cox's Bazar",
         fare:1800,
+        sAvailable:32,
     },
     {
         bus:"ENA TRANSPORT ",
@@ -145,6 +226,7 @@ let dha_cox=[
         start:"Dhaka",
         end:"Cox's Bazar",
         fare:1500,
+        sAvailable:32,
     },
 ];
 
@@ -157,6 +239,7 @@ let dha_ranga=[
         start:"Dhaka",
         end:"Rangamati",
         fare:620,
+        sAvailable:32,
     },
     {
         bus:"Unique Service ",
@@ -166,6 +249,7 @@ let dha_ranga=[
         start:"Dhaka",
         end:"Rangamati",
         fare:620,
+        sAvailable:32,
     },
     {
         bus:"Hanif Enterprise ",
@@ -175,6 +259,7 @@ let dha_ranga=[
         start:"Dhaka",
         end:"Rangamati",
         fare:620,
+        sAvailable:32,
     },
     {
         bus:"S Alam ",
@@ -184,6 +269,7 @@ let dha_ranga=[
         start:"Dhaka",
         end:"Rangamati",
         fare:620,
+        sAvailable:32,
     },
     {
         bus:"SaintMartin Paribahan ",
@@ -193,6 +279,7 @@ let dha_ranga=[
         start:"Dhaka",
         end:"Rangamati",
         fare:900,
+        sAvailable:32,
     },
 
 ];
@@ -206,6 +293,7 @@ let dha_bandar=[
         start:"Dhaka",
         end:"Bandarban",
         fare:1000,
+        sAvailable:32,
     },
     {
         bus:"Shyamoli Paribahan ",
@@ -215,6 +303,7 @@ let dha_bandar=[
         start:"Dhaka",
         end:"Bandarban",
         fare:1200,
+        sAvailable:32,
     },
     {
         bus:"Soudia paribahan ",
@@ -224,6 +313,7 @@ let dha_bandar=[
         start:"Dhaka",
         end:"Bandarban",
         fare:550,
+        sAvailable:32,
     },
     {
         bus:"S Alam ",
@@ -233,6 +323,7 @@ let dha_bandar=[
         start:"Dhaka",
         end:"Bandarban",
         fare:550,
+        sAvailable:32,
     },
     {
         bus:"Hanif Enterprise ",
@@ -242,6 +333,7 @@ let dha_bandar=[
         start:"Dhaka",
         end:"Bandarban",
         fare:550,
+        sAvailable:32,
     },
     
 ];
@@ -255,6 +347,7 @@ let dha_kol=[
         start:"Dhaka",
         end:"Kolkata",
         fare:1900,
+        sAvailable:32,
     },
     {
         bus:"DESH TRAVELS ",
@@ -264,6 +357,7 @@ let dha_kol=[
         start:"Dhaka",
         end:"Kolkata",
         fare:1550,
+        sAvailable:32,
     },
     {
         bus:"SHYAMOLI PARIBAHAN ",
@@ -273,6 +367,7 @@ let dha_kol=[
         start:"Dhaka",
         end:"Kolkata",
         fare:1900,
+        sAvailable:32,
     },
     {
         bus:"ROYEL COACH ",
@@ -282,6 +377,7 @@ let dha_kol=[
         start:"Dhaka",
         end:"Kolkata",
         fare:900,
+        sAvailable:32,
     },
     
 ];
@@ -295,6 +391,7 @@ let dha_raj=[
         start:"Dhaka",
         end:"Rajshahi",
         fare:1000,
+        sAvailable:32,
     },
     {
         bus:"ENA TRANSPORT ",
@@ -304,6 +401,7 @@ let dha_raj=[
         start:"Dhaka",
         end:"Rajshahi",
         fare:1000,
+        sAvailable:32,
     },
     {
         bus:"NATIONAL TRAVELS ",
@@ -313,6 +411,7 @@ let dha_raj=[
         start:"Dhaka",
         end:"Rajshahi",
         fare:450,
+        sAvailable:32,
     },
     {
         bus:"Hanif Enterprise ",
@@ -322,6 +421,7 @@ let dha_raj=[
         start:"Dhaka",
         end:"Rajshahi",
         fare:450,
+        sAvailable:32,
     },
     {
         bus:"Sakura paribahan ",
@@ -331,6 +431,7 @@ let dha_raj=[
         start:"Dhaka",
         end:"Rajshahi",
         fare:450,
+        sAvailable:32,
     },
 ];
 
@@ -345,6 +446,7 @@ let dha_bari=[
         start:"Dhaka",
         end:"Barisal",
         fare:820,
+        sAvailable:32,
     },
     {
         bus:"Sonartori  Paribahan ",
@@ -354,6 +456,7 @@ let dha_bari=[
         start:"Dhaka",
         end:"Barisal",
         fare:820,
+        sAvailable:32,
     },
     {
         bus:"Hemi Enterprise ",
@@ -363,6 +466,7 @@ let dha_bari=[
         start:"Dhaka",
         end:"Barisal",
         fare:820,
+        sAvailable:32,
     },
     {
         bus:"Sakura Paribahan ",
@@ -372,6 +476,7 @@ let dha_bari=[
         start:"Dhaka",
         end:"Barisal",
         fare:1300,
+        sAvailable:32,
     },
     {
         bus:"Sonartori  Paribahan ",
@@ -381,6 +486,7 @@ let dha_bari=[
         start:"Dhaka",
         end:"Barisal",
         fare:1300,
+        sAvailable:32,
     },
 ];
 
@@ -393,6 +499,7 @@ let dha_kua=[
         start:"Dhaka",
         end:"Kuakata",
         fare:1190,
+        sAvailable:32,
     },
     {
         bus:"Hemi Enterprise ",
@@ -402,6 +509,7 @@ let dha_kua=[
         start:"Dhaka",
         end:"Kuakata",
         fare:890,
+        sAvailable:32,
     },
     {
         bus:"Sakura Paribahan ",
@@ -411,6 +519,7 @@ let dha_kua=[
         start:"Dhaka",
         end:"Kuakata",
         fare:1700,
+        sAvailable:32,
     },
 ];
 
@@ -423,6 +532,7 @@ let dha_khul=[
         start:"Dhaka",
         end:"Kuakata",
         fare:800,
+        sAvailable:32,
     },
     {
         bus:"Tungipara express ",
@@ -432,6 +542,7 @@ let dha_khul=[
         start:"Dhaka",
         end:"Khulna",
         fare:800,
+        sAvailable:32,
     },
     {
         bus:"Shohagh ",
@@ -441,6 +552,7 @@ let dha_khul=[
         start:"Dhaka",
         end:"Khulna",
         fare:1800,
+        sAvailable:32,
     },
     {
         bus:"Saintmartin Hyundai ",
@@ -450,6 +562,7 @@ let dha_khul=[
         start:"Dhaka",
         end:"Khulna",
         fare:1800,
+        sAvailable:32,
     },
     {
         bus:"Emad Poribhan ",
@@ -459,6 +572,7 @@ let dha_khul=[
         start:"Dhaka",
         end:"Khulna",
         fare:1000,
+        sAvailable:32,
     },
     
 ];
@@ -472,6 +586,7 @@ let dha_cou=[
         start:"Dhaka",
         end:"Cumilla",
         fare:200,
+        sAvailable:32,
     },
     {
         bus:"Asia Line ",
@@ -481,6 +596,7 @@ let dha_cou=[
         start:"Dhaka",
         end:"Cumilla",
         fare:200,
+        sAvailable:32,
     },
     {
         bus:"Asia Transport ",
@@ -490,6 +606,7 @@ let dha_cou=[
         start:"Dhaka",
         end:"Cumilla",
         fare:180,
+        sAvailable:32,
     },
     {
         bus:"Tisha Plus ",
@@ -499,6 +616,7 @@ let dha_cou=[
         start:"Dhaka",
         end:"Cumilla",
         fare:150,
+        sAvailable:32,
     },
     {
         bus:"Royal Coach ",
@@ -508,6 +626,7 @@ let dha_cou=[
         start:"Dhaka",
         end:"Cumilla",
         fare:300,
+        sAvailable:32,
     },
 ];
 
@@ -520,6 +639,7 @@ let dha_sylh=[
         start:"Dhaka",
         end:"Sylhet",
         fare:750,
+        sAvailable:32,
     },
     {
         bus:"Ena ",
@@ -529,6 +649,7 @@ let dha_sylh=[
         start:"Dhaka",
         end:"Sylhet",
         fare:750,
+        sAvailable:32,
     },
     {
         bus:"Shyamoli Nr Travels ",
@@ -538,6 +659,7 @@ let dha_sylh=[
         start:"Dhaka",
         end:"Sylhet",
         fare:750,
+        sAvailable:32,
     },
     {
         bus:"London Express ",
@@ -547,6 +669,7 @@ let dha_sylh=[
         start:"Dhaka",
         end:"Sylhet",
         fare:1450,
+        sAvailable:32,
     },
     {
         bus:"Green Line ",
@@ -556,6 +679,7 @@ let dha_sylh=[
         start:"Dhaka",
         end:"Sylhet",
         fare:1600,
+        sAvailable:32,
     },
 ];
 
@@ -568,6 +692,7 @@ let dha_pab=[
         start:"Dhaka",
         end:"Pabna",
         fare:340,
+        sAvailable:32,
     },
     {
         bus:"Sarkar Travels ",
@@ -577,6 +702,7 @@ let dha_pab=[
         start:"Dhaka",
         end:"Pabna",
         fare:340,
+        sAvailable:32,
     },
     {
         bus:"Pabna Express ",
@@ -586,6 +712,7 @@ let dha_pab=[
         start:"Dhaka",
         end:"Pabna",
         fare:340,
+        sAvailable:32,
     },
     {
         bus:"Shyamoli Paribhan ",
@@ -595,6 +722,7 @@ let dha_pab=[
         start:"Dhaka",
         end:"Pabna",
         fare:400,
+        sAvailable:32,
     },
 ];
 
@@ -610,6 +738,7 @@ let dha_mou=[
         start:"Dhaka",
         end:"Moulvibazar",
         fare:380,
+        sAvailable:32,
     },
     {
         bus:"Shyamoli paribahan ",
@@ -619,6 +748,7 @@ let dha_mou=[
         start:"Dhaka",
         end:"Moulvibazar",
         fare:380,
+        sAvailable:32,
     },
     {
         bus:"Ruposhi bangla ",
@@ -628,6 +758,7 @@ let dha_mou=[
         start:"Dhaka",
         end:"Moulvibazar",
         fare:350,
+        sAvailable:32,
     },
     {
         bus:"TR Travels ",
@@ -637,6 +768,7 @@ let dha_mou=[
         start:"Dhaka",
         end:"Moulvibazar",
         fare:450,
+        sAvailable:32,
     },
 ];
 
@@ -649,6 +781,7 @@ let dha_sunam=[
         start:"Dhaka",
         end:"Sunamganj",
         fare:400,
+        sAvailable:32,
     },
     {
         bus:"MAMUN ENTERPRISE ",
@@ -658,6 +791,7 @@ let dha_sunam=[
         start:"Dhaka",
         end:"Sunamganj",
         fare:500,
+        sAvailable:32,
     },
     {
         bus:"NAZIM PARIBAHAN ",
@@ -667,6 +801,7 @@ let dha_sunam=[
         start:"Dhaka",
         end:"Sunamganj",
         fare:400,
+        sAvailable:32,
     },
 ];
 
@@ -679,6 +814,7 @@ let dha_dinaj=[
         start:"Dhaka",
         end:"DINAJPUR",
         fare:600,
+        sAvailable:32,
     },
     {
         bus:"Shyamoli Paribahan ",
@@ -688,6 +824,7 @@ let dha_dinaj=[
         start:"Dhaka",
         end:"DINAJPUR",
         fare:600,
+        sAvailable:32,
     },
     {
         bus:"Nabil Paribahan ",
@@ -697,6 +834,7 @@ let dha_dinaj=[
         start:"Dhaka",
         end:"DINAJPUR",
         fare:600,
+        sAvailable:32,
     },
 ];
 
@@ -709,6 +847,7 @@ let dha_rang=[
         start:"Dhaka",
         end:"Rangpur",
         fare:500,
+        sAvailable:32,
     },
     {
         bus:"Shyamoli Paribahan ",
@@ -718,6 +857,7 @@ let dha_rang=[
         start:"Dhaka",
         end:"Rangpur",
         fare:500,
+        sAvailable:32,
     },
     {
         bus:"Nabil Paribahan ",
@@ -727,6 +867,7 @@ let dha_rang=[
         start:"Dhaka",
         end:"Rangpur",
         fare:500,
+        sAvailable:32,
     },
     {
         bus:"S.R Travels ",
@@ -736,6 +877,7 @@ let dha_rang=[
         start:"Dhaka",
         end:"Rangpur",
         fare:500,
+        sAvailable:32,
     },
     {
         bus:"Hanif Enterprise ",
@@ -745,6 +887,7 @@ let dha_rang=[
         start:"Dhaka",
         end:"Rangpur",
         fare:1000,
+        sAvailable:32,
     },
 ];
 
@@ -757,6 +900,7 @@ let dha_bog=[
         start:"Dhaka",
         end:"Bogra",
         fare:350,
+        sAvailable:32,
     },
     {
         bus:"Shyamoli Paribahan ",
@@ -766,6 +910,7 @@ let dha_bog=[
         start:"Dhaka",
         end:"Bogra",
         fare:350,
+        sAvailable:32,
     },
     {
         bus:"S.R Travels ",
@@ -775,6 +920,7 @@ let dha_bog=[
         start:"Dhaka",
         end:"Bogra",
         fare:350,
+        sAvailable:32,
     },
 ];
 
@@ -787,6 +933,7 @@ let dha_siraj=[
         start:"Dhaka",
         end:"SIRAJGANJ",
         fare:280,
+        sAvailable:32,
     },
     {
         bus:"OVI ENTERPRISE ",
@@ -796,6 +943,7 @@ let dha_siraj=[
         start:"Dhaka",
         end:"SIRAJGANJ",
         fare:280,
+        sAvailable:32,
     },
     {
         bus:"SR TRAVELS ",
@@ -805,6 +953,7 @@ let dha_siraj=[
         start:"Dhaka",
         end:"SIRAJGANJ",
         fare:380,
+        sAvailable:32,
     },
 ];
 
@@ -817,6 +966,7 @@ let dha_patua=[
         start:"Dhaka",
         end:"PATUAKHALI",
         fare:500,
+        sAvailable:32,
     },
     {
         bus:"Sonartori Paribahan ",
@@ -826,6 +976,7 @@ let dha_patua=[
         start:"Dhaka",
         end:"PATUAKHALI",
         fare:500,
+        sAvailable:32,
     },
     {
         bus:"Surovi Paribahan ",
@@ -835,6 +986,40 @@ let dha_patua=[
         start:"Dhaka",
         end:"PATUAKHALI",
         fare:500,
+        sAvailable:32,
+    },
+];
+
+let chi_shyl=[
+    {
+        bus:"Star line ",
+        bus_class:"non AC",
+        coach:"SUV",
+        route:"Chittigong - Shylet",
+        start:"Chittigong",
+        end:"Shylet",
+        fare:600,
+        sAvailable:32,
+    },
+    {
+        bus:"Star line ",
+        bus_class:"AC",
+        coach:"SUV",
+        route:"Chittigong - Shylet",
+        start:"Chittigong",
+        end:"Shylet",
+        fare:1200,
+        sAvailable:32,
+    },
+    {
+        bus:"Ena ",
+        bus_class:"AC",
+        coach:"SUV",
+        route:"Chittigong - Shylet",
+        start:"Chittigong",
+        end:"Shylet",
+        fare:1250,
+        sAvailable:32,
     },
 ];
 
@@ -868,13 +1053,20 @@ if(getFrom==="Dhaka" && getTo==="Bogra")route_All_Details=[...dha_bog];
 if(getFrom==="Dhaka" && getTo==="Sirajganj")route_All_Details=[...dha_siraj];
 if(getFrom==="Dhaka" && getTo==="Patuakhali")route_All_Details=[...dha_patua];
 
-if(route_All_Details.length>0){
+
+if(getFrom==="Pabna" && getTo==="Rajshahi")route_All_Details=[...pabna_raj];
+if(getFrom==="Chittagong" && getTo==="Sylhet")route_All_Details=[...chi_shyl];
+
+let tDate=new Date();
+let selDate=new Date(getDate);
+
+if(route_All_Details.length>0 && tDate<selDate){
     
     document.getElementById("serch_bus").style.display="block";
     //document.getElementById("emptyDiv").innerHTML="Buses is not available";
     //console.log("empty");
 }
-if(route_All_Details.length==0){
+if(route_All_Details.length==0 || tDate>=selDate){
     document.getElementById("emptyDiv").style.display="flex";
 }
 // for display showing
@@ -895,6 +1087,10 @@ for(let i=0;i<route_All_Details.length;i++){
     document.getElementsByClassName("start")[i].innerHTML=route_All_Details[i].start;
     document.getElementsByClassName("end")[i].innerHTML=route_All_Details[i].end;
     document.getElementsByClassName("bus_fare")[i].innerHTML=route_All_Details[i].fare;
+    document.getElementsByClassName("savailable")[i].innerHTML=route_All_Details[i].sAvailable;
+
+
+    console.log(document.getElementsByClassName("bus_name")[i].innerHTML=route_All_Details[i].bus);
 }
 
 

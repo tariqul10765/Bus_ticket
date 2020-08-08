@@ -70,3 +70,10 @@ function insurance(e){
 // if(performance.navigation.type == 2){
 //     location.reload(true);
 //  }
+
+
+// for confirm seats
+
+function booked(){
+    confirm("Your confirmation is successfully done! ");
+}

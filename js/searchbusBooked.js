@@ -6,9 +6,17 @@ var ind;
 let c=1;
 let seatArr=[];
 
+let upAvailable;
+
+
+
 
 
 fareManege=(e)=>{
+
+    upAvailable=32;
+
+    console.log(e.target.offsetParent.parentElement.childNodes[7].firstElementChild.innerHTML);
     let busName=e.target.offsetParent.parentElement.firstElementChild.firstElementChild.innerHTML;
     localStorage.setItem("busname",busName);
     if(c==1){
@@ -19,7 +27,7 @@ fareManege=(e)=>{
         c=1;
     }
     count=0;
-    console.log(e);
+    //console.log(e);
     fare=e.target.previousElementSibling.childNodes[0].textContent;
     busClass=e.target.parentNode.parentNode.firstElementChild.childNodes[3].innerHTML;
     //fare="5";
@@ -36,12 +44,23 @@ function bookedHandle(e){
     var h4ForFare;
     //console.log(e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode);
     if(e.target.style.color=="red"){
-        
+        upAvailable++;
+        document.getElementsByClassName("savailable")[ind].innerHTML=upAvailable;
         e.target.style.color="lightskyblue";
         //console.log(e.target.parentElement.title);
         //var amni=e.target.parentElement.title;
         var removeElement= document.getElementsByClassName(e.target.parentElement.title);
         
+       // console.log(e.target.parentElement.title);
+
+        for(let i=0;i<seatArr.length;i++){
+            //console.log(seatArr[i]);
+            if(seatArr[i]==e.target.parentElement.title){
+                console.log("hey");
+                seatArr.splice(i,1);
+                break;
+            }
+        }
         // console.log(amni2[0]);
         // console.log(amni2[1]);
         // console.log(amni2[2]);
@@ -64,7 +83,8 @@ function bookedHandle(e){
     else {
         e.target.style.color="red";
         
-
+        upAvailable--;
+        document.getElementsByClassName("savailable")[ind].innerHTML=upAvailable;
         count++;
 
         console.log(ind);
@@ -101,6 +121,8 @@ function bookedHandle(e){
     
     localStorage.setItem("allseat",seatArr);
     localStorage.setItem("total",total);
+
+    
     //console.log(total);
     //console.log(e.target.parentElement.title);
     // console.log(busClass);
@@ -115,4 +137,22 @@ if(performance.navigation.type==2){
     location.reload(true);
 }
 //console.log(performance.navigation.type);
+
+
+
+
+
+
+
+//for booked seat
+
+let get=localStorage.getItem("allseat");
+
+console.log(document.getElementsByClassName("h4")[0]);
+
+let isconfirm=localStorage.getItem("isconfirm");
+
+if(isconfirm){
+
+}
 

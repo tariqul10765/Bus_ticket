@@ -16,6 +16,18 @@ $('.from-group2').click(function(){
 $('.datepicker').datepicker();
 
 
+function submitfeed(){
+
+    if (confirm("Thank you for your feedback! ")) {
+        document.getElementById("fName").value="";
+        document.getElementById("email").value="";
+        document.getElementById("pAdress").value="";
+        document.getElementById("cityName").value="";
+        document.getElementById("#").value="";
+      } else {
+        
+      }
+}
 
 // $('.lb').click(function(e){
 //     $(this).siblings('.player').toggle(500);
